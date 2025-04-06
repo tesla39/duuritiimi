@@ -1,13 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from '@/hooks/useTranslation';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Button } from '@/components/ui/button';
 
 const Navbar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const { t, toggleLanguage, language } = useTranslation();
   
   useEffect(() => {
     const handleScroll = () => {
@@ -38,42 +39,59 @@ const Navbar: React.FC = () => {
         </a>
         
         {/* Desktop menu */}
-        <ul className="hidden md:flex space-x-8">
-          <li><a href="#services" className="nav-link">Palvelut</a></li>
-          <li><a href="#team" className="nav-link">Tiimi</a></li>
-          <li><a href="#contact" className="nav-link">Yhteystiedot</a></li>
-        </ul>
+        <div className="hidden md:flex items-center space-x-8">
+          <ul className="flex space-x-8">
+            <li><a href="#services" className="nav-link">{t('services')}</a></li>
+            <li><a href="#team" className="nav-link">{t('team')}</a></li>
+            <li><a href="#contact" className="nav-link">{t('contact')}</a></li>
+          </ul>
+          
+          <button 
+            onClick={toggleLanguage} 
+            className="flex items-center text-sm font-medium hover:text-teal transition-colors"
+          >
+            <Globe size={16} className="mr-1" />
+            {language === 'fi' ? 'FI' : 'EN'}
+          </button>
+        </div>
         
-        {/* Mobile menu button */}
-        <button onClick={toggleMenu} className="md:hidden">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-      
-      {/* Mobile menu */}
-      <div 
-        className={cn(
-          "fixed inset-0 bg-white pt-20 px-4 md:hidden transition-transform duration-300 ease-in-out transform z-40",
-          isOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        <ul className="flex flex-col space-y-6 items-center">
-          <li>
-            <a href="#services" className="text-xl" onClick={toggleMenu}>
-              Palvelut
-            </a>
-          </li>
-          <li>
-            <a href="#team" className="text-xl" onClick={toggleMenu}>
-              Tiimi
-            </a>
-          </li>
-          <li>
-            <a href="#contact" className="text-xl" onClick={toggleMenu}>
-              Yhteystiedot
-            </a>
-          </li>
-        </ul>
+        {/* Mobile menu */}
+        <div className="md:hidden flex items-center space-x-4">
+          <button 
+            onClick={toggleLanguage} 
+            className="flex items-center text-sm font-medium hover:text-teal transition-colors"
+          >
+            <Globe size={16} className="mr-1" />
+            {language === 'fi' ? 'FI' : 'EN'}
+          </button>
+          
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="ghost" size="icon" className="p-0 h-auto w-auto">
+                <Menu size={24} />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="pt-16">
+              <ul className="flex flex-col space-y-6 items-center">
+                <li>
+                  <a href="#services" className="text-xl">
+                    {t('services')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#team" className="text-xl">
+                    {t('team')}
+                  </a>
+                </li>
+                <li>
+                  <a href="#contact" className="text-xl">
+                    {t('contact')}
+                  </a>
+                </li>
+              </ul>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </nav>
   );
