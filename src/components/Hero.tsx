@@ -10,14 +10,14 @@ const Hero: React.FC = () => {
   const [hireModalOpen, setHireModalOpen] = React.useState(false);
 
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-16 bg-gradient-to-br from-white to-gray-50">
+    <section className="min-h-screen flex items-center pt-20 pb-16 bg-black text-white">
       <div className="container">
         <div className="max-w-3xl">
           <h1 className="mb-6 animate-fade-in">
             {t('heroTitle').split(' ').map((word, i) => (
               <React.Fragment key={i}>
                 {word === 'asiantuntijuutta' || word === 'digituotteita' || word === 'expertise' || word === 'products' ? (
-                  <span className="text-teal">{word} </span>
+                  <span className="text-yellow">{word} </span>
                 ) : (
                   <span>{word} </span>
                 )}
@@ -33,7 +33,7 @@ const Hero: React.FC = () => {
             </a>
             <button
               onClick={() => setHireModalOpen(true)}
-              className="px-5 py-2 text-white bg-gradient-to-r from-teal to-teal-dark rounded-md transition-all duration-300 hover:opacity-90"
+              className="px-5 py-2 text-white bg-gradient-to-r from-yellow to-yellow-dark rounded-md transition-all duration-300 hover:opacity-90"
             >
               {t('hireDirectly')}
             </button>
@@ -45,8 +45,8 @@ const Hero: React.FC = () => {
       </div>
 
       <Dialog open={hireModalOpen} onOpenChange={setHireModalOpen}>
-        <DialogContent className="sm:max-w-[500px] rounded-lg">
-          <DialogTitle className="text-2xl font-bold mb-6">{t('hireDirectly')}</DialogTitle>
+        <DialogContent className="sm:max-w-[500px] rounded-lg bg-black text-white border-yellow">
+          <DialogTitle className="text-2xl font-bold mb-6 text-yellow">{t('hireDirectly')}</DialogTitle>
           <HireForm onSuccess={() => setHireModalOpen(false)} />
         </DialogContent>
       </Dialog>

@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Linkedin, Mail } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface TeamMemberProps {
   name: string;
@@ -27,7 +28,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, title, imageSrc, linkedin
               href={linkedin} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-teal hover:bg-teal hover:text-white transition-colors"
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-yellow hover:bg-yellow hover:text-black transition-colors"
             >
               <Linkedin size={20} />
             </a>
@@ -36,7 +37,7 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, title, imageSrc, linkedin
           {email && (
             <a 
               href={`mailto:${email}`}
-              className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-teal hover:bg-teal hover:text-white transition-colors"
+              className="w-10 h-10 rounded-full bg-black flex items-center justify-center text-yellow hover:bg-yellow hover:text-black transition-colors"
             >
               <Mail size={20} />
             </a>
@@ -44,38 +45,40 @@ const TeamMember: React.FC<TeamMemberProps> = ({ name, title, imageSrc, linkedin
         </div>
       </div>
       
-      <h3 className="text-xl font-bold">{name}</h3>
-      <p className="text-gray-600">{title}</p>
+      <h3 className="text-xl font-bold text-white">{name}</h3>
+      <p className="text-gray-400">{title}</p>
     </div>
   );
 };
 
 const Team: React.FC = () => {
+  const { t } = useTranslation();
+  
   const teamMembers = [
     {
       name: "Kaisa Korhonen",
-      title: "Toimitusjohtaja & Digimarkkinointi",
+      title: t('roleCEO'),
       imageSrc: "/placeholder.svg",
       linkedin: "https://linkedin.com",
       email: "kaisa@duuritiimi.fi"
     },
     {
       name: "Mikko Virtanen",
-      title: "Teknologiajohtaja",
+      title: t('roleCTO'),
       imageSrc: "/placeholder.svg",
       linkedin: "https://linkedin.com",
       email: "mikko@duuritiimi.fi"
     },
     {
       name: "Emilia Järvinen",
-      title: "Digitaalinen Strategia",
+      title: t('roleStrategy'),
       imageSrc: "/placeholder.svg",
       linkedin: "https://linkedin.com",
       email: "emilia@duuritiimi.fi"
     },
     {
       name: "Antti Mäkinen",
-      title: "Web-kehittäjä",
+      title: t('roleDev'),
       imageSrc: "/placeholder.svg",
       linkedin: "https://linkedin.com",
       email: "antti@duuritiimi.fi"
@@ -83,12 +86,12 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <section id="team" className="section">
+    <section id="team" className="section bg-black">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4">Tiimimme</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Olemme intohimoisia digitaalisen maailman ammattilaisia, joiden tavoitteena on auttaa asiakkaitamme menestymään.
+          <h2 className="mb-4 text-white">{t('teamTitle')}</h2>
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            {t('teamSubtitle')}
           </p>
         </div>
         

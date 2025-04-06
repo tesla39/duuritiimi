@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Code, Cpu, Rocket, PenTool, SearchCheck, BadgeCheck } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 interface ServiceCardProps {
   title: string;
@@ -10,57 +11,59 @@ interface ServiceCardProps {
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover-scale group">
-      <div className="text-teal mb-4 w-12 h-12 flex items-center justify-center bg-teal bg-opacity-10 rounded-full group-hover:bg-teal group-hover:text-white transition-colors">
+    <div className="bg-black p-6 rounded-lg shadow-sm border border-gray-800 hover-scale group">
+      <div className="text-yellow mb-4 w-12 h-12 flex items-center justify-center bg-yellow bg-opacity-10 rounded-full group-hover:bg-yellow group-hover:text-black transition-colors">
         {icon}
       </div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-bold mb-2 text-white">{title}</h3>
+      <p className="text-gray-400">{description}</p>
     </div>
   );
 };
 
 const Services: React.FC = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
-      title: "Verkkokaupat",
-      description: "Rakennamme tehokkaat ja käyttäjäystävälliset verkkokaupparatkaisut, jotka tukevat liiketoimintaasi.",
+      title: t('serviceWebshops'),
+      description: t('descWebshops'),
       icon: <Code size={24} />
     },
     {
-      title: "Verkkosivut",
-      description: "Suunnittelemme ja toteutamme tyylikkäät ja käyttäjäystävälliset verkkosivut, jotka vahvistavat yrityksesi brändiä.",
+      title: t('serviceWebsites'),
+      description: t('descWebsites'),
       icon: <PenTool size={24} />
     },
     {
-      title: "Digimarkkinointi",
-      description: "Rakennamme strategian ja toteutamme tehokkaita markkinointikampanjoita, jotka tavoittavat oikean kohderyhmän.",
+      title: t('serviceDigitalMarketing'),
+      description: t('descDigitalMarketing'),
       icon: <SearchCheck size={24} />
     },
     {
-      title: "Konsultointi",
-      description: "Tarjoamme asiantuntijanäkemyksiä ja strategisia neuvoja digitaalisen liiketoimintasi kehittämiseen.",
+      title: t('serviceConsulting'),
+      description: t('descConsulting'),
       icon: <BadgeCheck size={24} />
     },
     {
-      title: "Teknologiaratkaisut",
-      description: "Kehitämme räätälöityjä ohjelmistoja ja integraatioita, jotka automatisoivat ja tehostavat liiketoimintaprosessejasi.",
+      title: t('serviceTechSolutions'),
+      description: t('descTechSolutions'),
       icon: <Cpu size={24} />
     },
     {
-      title: "Digitaalinen strategia",
-      description: "Autamme luomaan kattavan digitaalisen transformaatiosuunnitelman, joka tukee liiketoimintatavoitteitasi.",
+      title: t('serviceDigitalStrategy'),
+      description: t('descDigitalStrategy'),
       icon: <Rocket size={24} />
     }
   ];
 
   return (
-    <section id="services" className="section bg-gray-50">
+    <section id="services" className="section bg-gray-900">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4">Palvelumme</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Tarjoamme kokonaisvaltaisia digitaalisia ratkaisuja, jotka auttavat yritystäsi kasvamaan ja menestymään.
+          <h2 className="mb-4 text-white">{t('servicesTitle')}</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {t('servicesSubtitle')}
           </p>
         </div>
         

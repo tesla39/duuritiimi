@@ -25,7 +25,7 @@
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
 
-    --accent: 171 82% 51%;
+    --accent: 45 100% 51%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
@@ -66,7 +66,7 @@
     --muted: 0 0% 14.9%;
     --muted-foreground: 0 0% 63.9%;
 
-    --accent: 171 82% 42%;
+    --accent: 45 100% 42%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
@@ -127,20 +127,20 @@
   @apply transition-transform duration-300 hover:scale-105;
 }
 
-.teal-highlight {
-  @apply text-teal;
+.yellow-highlight {
+  @apply text-yellow;
 }
 
 .nav-link {
-  @apply relative inline-block py-2 text-base font-medium transition-colors duration-300 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-teal before:transition-all before:duration-300 hover:text-teal hover:before:w-full;
+  @apply relative inline-block py-2 text-base font-medium transition-colors duration-300 before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-yellow before:transition-all before:duration-300 hover:text-yellow hover:before:w-full;
 }
 
 .button-primary {
-  @apply px-5 py-2 text-white bg-teal rounded-md transition-all duration-300 hover:bg-teal-light;
+  @apply px-5 py-2 text-white bg-yellow rounded-md transition-all duration-300 hover:bg-yellow-light;
 }
 
 .button-secondary {
-  @apply px-5 py-2 text-teal border border-teal rounded-md transition-all duration-300 hover:bg-teal hover:text-white;
+  @apply px-5 py-2 text-yellow border border-yellow rounded-md transition-all duration-300 hover:bg-yellow hover:text-white;
 }
 
 /* Add additional animations */
@@ -179,5 +179,3 @@
 .delay-5 {
   animation-delay: 0.5s;
 }
-
-/* Update tailwind.config.ts to include Poppins font */

@@ -53,10 +53,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				teal: {
-					DEFAULT: '#2DD5C4',
-					light: '#44E6D7',
-					dark: '#1AAA9B'
+				yellow: {
+					DEFAULT: '#FFCB05',
+					light: '#FFD633',
+					dark: '#E6B800'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

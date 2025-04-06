@@ -78,7 +78,92 @@ const translations: Translations = {
   thankYou: {
     fi: 'Kiitos kiinnostuksestasi! Otamme sinuun pian yhteyttä.',
     en: 'Thanks for your interest! We\'ll be in touch shortly.',
-  }
+  },
+  // Added translations for Services section
+  servicesTitle: {
+    fi: 'Palvelumme',
+    en: 'Our Services',
+  },
+  servicesSubtitle: {
+    fi: 'Tarjoamme kokonaisvaltaisia digitaalisia ratkaisuja, jotka auttavat yritystäsi kasvamaan ja menestymään.',
+    en: 'We offer comprehensive digital solutions that help your business grow and succeed.',
+  },
+  // Service titles
+  serviceWebshops: {
+    fi: 'Verkkokaupat',
+    en: 'Online Stores',
+  },
+  serviceWebsites: {
+    fi: 'Verkkosivut',
+    en: 'Websites',
+  },
+  serviceDigitalMarketing: {
+    fi: 'Digimarkkinointi',
+    en: 'Digital Marketing',
+  },
+  serviceConsulting: {
+    fi: 'Konsultointi',
+    en: 'Consulting',
+  },
+  serviceTechSolutions: {
+    fi: 'Teknologiaratkaisut',
+    en: 'Technology Solutions',
+  },
+  serviceDigitalStrategy: {
+    fi: 'Digitaalinen strategia',
+    en: 'Digital Strategy',
+  },
+  // Service descriptions
+  descWebshops: {
+    fi: 'Rakennamme tehokkaat ja käyttäjäystävälliset verkkokaupparatkaisut, jotka tukevat liiketoimintaasi.',
+    en: 'We build efficient and user-friendly e-commerce solutions that support your business.',
+  },
+  descWebsites: {
+    fi: 'Suunnittelemme ja toteutamme tyylikkäät ja käyttäjäystävälliset verkkosivut, jotka vahvistavat yrityksesi brändiä.',
+    en: 'We design and implement stylish and user-friendly websites that strengthen your company\'s brand.',
+  },
+  descDigitalMarketing: {
+    fi: 'Rakennamme strategian ja toteutamme tehokkaita markkinointikampanjoita, jotka tavoittavat oikean kohderyhmän.',
+    en: 'We build strategies and implement effective marketing campaigns that reach the right target audience.',
+  },
+  descConsulting: {
+    fi: 'Tarjoamme asiantuntijanäkemyksiä ja strategisia neuvoja digitaalisen liiketoimintasi kehittämiseen.',
+    en: 'We offer expert insights and strategic advice for developing your digital business.',
+  },
+  descTechSolutions: {
+    fi: 'Kehitämme räätälöityjä ohjelmistoja ja integraatioita, jotka automatisoivat ja tehostavat liiketoimintaprosessejasi.',
+    en: 'We develop customized software and integrations that automate and streamline your business processes.',
+  },
+  descDigitalStrategy: {
+    fi: 'Autamme luomaan kattavan digitaalisen transformaatiosuunnitelman, joka tukee liiketoimintatavoitteitasi.',
+    en: 'We help create a comprehensive digital transformation plan that supports your business goals.',
+  },
+  // Team section
+  teamTitle: {
+    fi: 'Tiimimme',
+    en: 'Our Team',
+  },
+  teamSubtitle: {
+    fi: 'Olemme intohimoisia digitaalisen maailman ammattilaisia, joiden tavoitteena on auttaa asiakkaitamme menestymään.',
+    en: 'We are passionate digital world professionals whose goal is to help our customers succeed.',
+  },
+  // Team member roles
+  roleCEO: {
+    fi: 'Toimitusjohtaja & Digimarkkinointi',
+    en: 'CEO & Digital Marketing',
+  },
+  roleCTO: {
+    fi: 'Teknologiajohtaja',
+    en: 'CTO',
+  },
+  roleStrategy: {
+    fi: 'Digitaalinen Strategia',
+    en: 'Digital Strategy',
+  },
+  roleDev: {
+    fi: 'Web-kehittäjä',
+    en: 'Web Developer',
+  },
 };
 
 interface TranslationContextType {
