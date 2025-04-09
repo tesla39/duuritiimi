@@ -52,7 +52,7 @@ const Services: React.FC = () => {
     },
     {
       title: t('Other'),
-      description: t('Can’t find the role you’re looking for? We also match unique talent for specialized or unconventional jobs. Let us know your needs — we’re flexible and ready to help.'),
+      description: t('Can't find the role you're looking for? We also match unique talent for specialized or unconventional jobs. Let us know your needs — we're flexible and ready to help.'),
       icon: <Rocket size={24} />
     }    
   ];

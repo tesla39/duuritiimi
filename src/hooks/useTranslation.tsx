@@ -164,6 +164,24 @@ const translations: Translations = {
     fi: 'Web-kehittäjä',
     en: 'Web Developer',
   },
+  // Footer translations
+  footerTagline: {
+    fi: 'Digitaalista asiantuntijuutta ja digituotteita yrityksellesi. Kasvata liiketoimintaasi kanssamme.',
+    en: 'Digital expertise and digital products for your business. Grow your business with us.',
+  },
+  footerRights: {
+    fi: 'Kaikki oikeudet pidätetään.',
+    en: 'All rights reserved.',
+  },
+  // About us section if needed
+  aboutUsTitle: {
+    fi: 'Meistä',
+    en: 'About Us',
+  },
+  aboutUsContent: {
+    fi: 'Olemme digitaalisen kehityksen asiantuntijatiimi, joka on sitoutunut auttamaan yrityksiä kasvamaan ja menestymään verkossa.',
+    en: 'We are a team of digital development experts committed to helping businesses grow and succeed online.',
+  },
 };
 
 interface TranslationContextType {

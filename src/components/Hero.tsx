@@ -28,12 +28,12 @@ const Hero: React.FC = () => {
             {t('heroSubtitle')}
           </p>
           <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <a href="#contact" className="button-primary">
+            <a href="#contact" className="button-secondary">
               {t('contactUs')}
             </a>
             <button
               onClick={() => setHireModalOpen(true)}
-              className="px-5 py-2 text-white bg-gradient-to-r from-yellow to-yellow-dark rounded-md transition-all duration-300 hover:opacity-90"
+              className="px-5 py-2 text-black font-bold bg-gradient-to-r from-yellow to-yellow-dark rounded-md transition-all duration-300 hover:opacity-90 shadow-lg hover:shadow-xl transform hover:-translate-y-1 animate-pulse"
             >
               {t('hireDirectly')}
             </button>
