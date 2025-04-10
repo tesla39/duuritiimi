@@ -192,7 +192,7 @@ aboutUsTitle: {
 },
 aboutUsContent: {
   fi: 'Olemme rekrytointialan asiantuntijoita, jotka auttavat yrityksiä ja kotitalouksia löytämään oikeat työntekijät oikeaan aikaan. Tavoitteenamme on tarjota joustavia ja luotettavia henkilöstöratkaisuja eri tarpeisiin.',
-  en: 'We are recruitment professionals helping companies and households find the right people at the right time. Our goal is to provide flexible and reliable staffing solutions for diverse needs.',
+  en: 'We are recruitment professionals helping companies and households find the right people at the right time. Our goal is to provide flexible and reliable staffing solutions for your diverse needs.',
 },
 };
 
