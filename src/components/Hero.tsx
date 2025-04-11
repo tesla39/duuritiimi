@@ -1,9 +1,13 @@
 
 import React, { useState } from 'react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
+import { 
+  Dialog, 
+  DialogContent, 
+  DialogTitle 
+} from '@/components/ui/dialog';
 import { HiringForm } from '@/components/HiringForm';
-import { cn } from '@/lib/utils';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 type FormType = 'cleaner' | 'assistant' | 'other';
 
@@ -51,13 +55,17 @@ const Hero: React.FC = () => {
       </div>
 
       <Dialog open={formModalOpen} onOpenChange={setFormModalOpen}>
-        <DialogContent className="sm:max-w-[500px] rounded-lg bg-black text-white border-yellow">
-          <DialogTitle className="text-2xl font-bold mb-6 text-yellow">
+        <DialogContent className="sm:max-w-[500px] max-h-[90vh] rounded-lg bg-black text-white border-yellow overflow-hidden">
+          <DialogTitle className="text-2xl font-bold text-yellow">
             {formType === 'cleaner' ? t('hireDirectly') : 
              formType === 'assistant' ? t('hireAssistant') : 
              t('exploreServices')}
           </DialogTitle>
-          <HiringForm type={formType} onSuccess={() => setFormModalOpen(false)} />
+          <ScrollArea className="h-[calc(90vh-120px)] md:max-h-[60vh] pr-4">
+            <div className="pb-2">
+              <HiringForm type={formType} onSuccess={() => setFormModalOpen(false)} />
+            </div>
+          </ScrollArea>
         </DialogContent>
       </Dialog>
     </section>
