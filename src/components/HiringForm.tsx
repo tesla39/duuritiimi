@@ -150,7 +150,7 @@ export function HiringForm({
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-auto p-0 bg-gray-800 border-gray-700">
-              <Calendar mode="single" selected={formData.fromDate || undefined} onSelect={handleSelectFromDate} initialFocus className="p-3 pointer-events-auto" />
+              <Calendar mode="single" selected={formData.fromDate || undefined} onSelect={handleSelectFromDate} initialFocus className="p-3 pointer-events-auto bg-gray-100" />
             </PopoverContent>
           </Popover>
           
