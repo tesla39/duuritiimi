@@ -29,8 +29,8 @@ const translations: Translations = {
 
   // HERO section
   heroTitle: {
-    fi: 'Palkkaa helposti ja nopeasti ilman vaivaa — suoraan meiltä.',
-    en: 'Hire easily and quickly without the hassle—directly from us.',
+    fi: 'Suoraa rekrytointia minuuteissa.',
+    en: 'Direct Hiring in Minutes.',
   },
   exploreServices: {
     fi: 'Muu',
@@ -47,12 +47,12 @@ const translations: Translations = {
 
   // Call to action
   ctaTitle: {
-    fi: 'Löydä oikeat tekijät oikeaan aikaan',
-    en: 'Find the Right People at the Right Time',
+    fi: 'Vuokraa massaa tai palkkaa nopeasti',
+    en: 'Hire in Bulk or Get Hired Fast',
   },
   ctaSubtitle: {
-    fi: 'Tarvitsetko osaavaa työvoimaa nopeasti? Ota yhteyttä niin löydämme juuri sinun tarpeisiisi sopivat työntekijät.',
-    en: "Need skilled staff fast? Contact us and we'll match the right people to your specific needs.",
+    fi: 'Kiireellisestä henkilöstöresursoinnista laajoihin rekrytointeihin – me hoidamme kaiken. Työnhakijat, olemme täällä myös teitä varten – ottakaa yhteyttä jo tänään',
+    en: 'From urgent staffing to large-scale recruitment – ​​we handle it all. Job seekers, we are here for you too – get in touch today',
   },
 
   // Form fields
