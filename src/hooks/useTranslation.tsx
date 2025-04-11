@@ -30,16 +30,20 @@ const translations: Translations = {
 
   // HERO section
   heroTitle: {
-    fi: 'Luotettavaa työvoimaa tarpeidesi mukaan',
-    en: 'Reliable Workforce Tailored to Your Needs',
-  },
-  heroSubtitle: {
-    fi: 'Yhdistämme yritykset ja kotitaloudet ammattitaitoisiin työntekijöihin',
-    en: 'We connect businesses and households with skilled professionals',
+    fi: 'Palkkaa helposti ja nopeasti ilman vaivaa — suoraan meiltä.',
+    en: 'Hire easily and quickly without the hassle—directly from us.',
   },
   exploreServices: {
-    fi: 'Tutustu palveluihimme',
-    en: 'Explore Our Services',
+    fi: 'Muu',
+    en: 'Other',
+  },
+  hireDirectly: {
+    fi: 'Palkkaa siivooja',
+    en: 'Hire a Cleaner',
+  },
+  hireAssistant: {
+    fi: 'Palkkaa henkilökohtainen avustaja',
+    en: 'Hire a Personal Assistant',
   },
 
   // Call to action
@@ -49,14 +53,52 @@ const translations: Translations = {
   },
   ctaSubtitle: {
     fi: 'Tarvitsetko osaavaa työvoimaa nopeasti? Ota yhteyttä niin löydämme juuri sinun tarpeisiisi sopivat työntekijät.',
-    en: 'Need skilled staff fast? Contact us and we’ll match the right people to your specific needs.',
+    en: 'Need skilled staff fast? Contact us and we'll match the right people to your specific needs.',
   },
 
-  // Hire request form
-  hireDirectly: {
-    fi: 'Palkkaa työntekijä',
-    en: 'Hire a Worker',
+  // Form fields
+  fullName: {
+    fi: 'Asiakkaan nimi',
+    en: 'Full Name of Client',
   },
+  address: {
+    fi: 'Työn osoite',
+    en: 'Address of Work Location',
+  },
+  phoneNumber: {
+    fi: 'Asiakkaan puhelinnumero',
+    en: 'Phone Number of Client',
+  },
+  email: {
+    fi: 'Asiakkaan sähköposti',
+    en: 'Email of Client',
+  },
+  serviceDetails: {
+    fi: 'Palvelun tiedot',
+    en: 'Service Details',
+  },
+  serviceDuration: {
+    fi: 'Palvelun kesto',
+    en: 'Service Duration',
+  },
+  fromDate: {
+    fi: 'Aloituspäivä',
+    en: 'From Date',
+  },
+  toDate: {
+    fi: 'Lopetuspäivä',
+    en: 'To Date',
+  },
+  additionalInfo: {
+    fi: 'Lisätiedot',
+    en: 'Additional Info',
+  },
+  hireFor: {
+    fi: 'Palkkaa',
+    en: 'Hire For',
+  },
+  
+  // Hire request form
   companyName: {
     fi: 'Yrityksen nimi',
     en: 'Company Name',
@@ -83,7 +125,7 @@ const translations: Translations = {
   },
   thankYou: {
     fi: 'Kiitos yhteydenotosta! Otamme sinuun pian yhteyttä.',
-    en: 'Thanks for getting in touch! We’ll contact you shortly.',
+    en: 'Thanks for getting in touch! We'll contact you shortly.',
   },
 
   // Services section
@@ -145,55 +187,28 @@ const translations: Translations = {
   },
   descOther: {
     fi: 'Kerro meille erityistarpeistasi, niin etsimme juuri oikean henkilön tehtävään.',
-    en: 'Tell us your special needs — we’ll find the right fit for the role.',
+    en: 'Tell us your special needs — we'll find the right fit for the role.',
   },
 
-  // Team section
-  teamTitle: {
-    fi: 'Tiimimme',
-    en: 'Our Team',
+  // Footer translations
+  footerTagline: {
+    fi: 'Luotettava rekrytointikumppani. Yhdistämme osaajat ja työnantajat tehokkaasti.',
+    en: 'Your trusted recruitment partner. Connecting talent with opportunity.',
   },
-  teamSubtitle: {
-    fi: 'Olemme rekrytointialan asiantuntijoita, joiden intohimona on yhdistää oikeat ihmiset oikeisiin tehtäviin.',
-    en: 'We are recruitment professionals passionate about matching the right people with the right roles.',
+  footerRights: {
+    fi: 'Kaikki oikeudet pidätetään.',
+    en: 'All rights reserved.',
   },
 
-  // Team member roles (example)
-  roleCEO: {
-    fi: 'Toimitusjohtaja, Rekrytointistrategia',
-    en: 'CEO, Recruitment Strategy',
+  // About us section
+  aboutUsTitle: {
+    fi: 'Meistä',
+    en: 'About Us',
   },
-  roleCTO: {
-    fi: 'Teknologiapäällikkö',
-    en: 'CTO',
+  aboutUsContent: {
+    fi: 'Olemme rekrytointialan asiantuntijoita, jotka auttavat yrityksiä ja kotitalouksia löytämään oikeat työntekijät oikeaan aikaan. Tavoitteenamme on tarjota joustavia ja luotettavia henkilöstöratkaisuja eri tarpeisiin.',
+    en: 'We are recruitment professionals helping companies and households find the right people at the right time. Our goal is to provide flexible and reliable staffing solutions for your diverse needs.',
   },
-  roleStrategy: {
-    fi: 'Asiakassuhteet ja Kumppanuudet',
-    en: 'Client Relations & Partnerships',
-  },
-  roleDev: {
-    fi: 'IT- ja järjestelmätuki',
-    en: 'IT & Systems Support',
-  },
-// Footer translations
-footerTagline: {
-  fi: 'Luotettava rekrytointikumppani. Yhdistämme osaajat ja työnantajat tehokkaasti.',
-  en: 'Your trusted recruitment partner. Connecting talent with opportunity.',
-},
-footerRights: {
-  fi: 'Kaikki oikeudet pidätetään.',
-  en: 'All rights reserved.',
-},
-
-// About us section
-aboutUsTitle: {
-  fi: 'Meistä',
-  en: 'About Us',
-},
-aboutUsContent: {
-  fi: 'Olemme rekrytointialan asiantuntijoita, jotka auttavat yrityksiä ja kotitalouksia löytämään oikeat työntekijät oikeaan aikaan. Tavoitteenamme on tarjota joustavia ja luotettavia henkilöstöratkaisuja eri tarpeisiin.',
-  en: 'We are recruitment professionals helping companies and households find the right people at the right time. Our goal is to provide flexible and reliable staffing solutions for your diverse needs.',
-},
 };
 
 interface TranslationContextType {

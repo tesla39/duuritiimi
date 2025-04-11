@@ -26,33 +26,33 @@ const Services: React.FC = () => {
   
   const services = [
     {
-      title: t('Homecare'),
-      description: t("We connect compassionate professionals with families and individuals who need assistance with daily living, personal care, and companionship. Our candidates are experienced, reliable, and dedicated to enhancing the quality of life."),
+      title: t('serviceHomecare'),
+      description: t('descHomecare'),
       icon: <Code size={24} />
     },
     {
-      title: t('Helper'),
-      description: t("Our helpers provide essential support in various roles, from cleaning and errands to basic maintenance and general assistance — ideal for households, offices, or anyone needing a reliable helping hand."),
+      title: t('serviceHelper'),
+      description: t('descHelper'),
       icon: <PenTool size={24} />
     },
     {
-      title: t('Event planning'),
-      description: t("From corporate events to private gatherings, we offer skilled staff who assist with planning, coordination, and on-site support to ensure events run smoothly and professionally."),
+      title: t('serviceEventPlanning'),
+      description: t('descEventPlanning'),
       icon: <SearchCheck size={24} />
     },
     {
-      title: t('Customer service'),
-      description: t("We supply friendly and well-trained customer service representatives who excel in communication, problem-solving, and delivering positive customer experiences across industries."),
+      title: t('serviceCustomerService'),
+      description: t('descCustomerService'),
       icon: <BadgeCheck size={24} />
     },
     {
-      title: t('Assistant support'),
-      description: t("Whether for administrative, executive, or remote assistance, we provide organized and tech-savvy assistants ready to support your business operations and boost productivity."),
+      title: t('serviceAssistantSupport'),
+      description: t('descAssistantSupport'),
       icon: <Cpu size={24} />
     },
     {
-      title: t('Other'),
-      description: t("Can't find the role you're looking for? We also match unique talent for specialized or unconventional jobs. Let us know your needs — we're flexible and ready to help."),
+      title: t('serviceOther'),
+      description: t('descOther'),
       icon: <Rocket size={24} />
     }    
   ];
