@@ -53,7 +53,7 @@ const translations: Translations = {
   },
   ctaSubtitle: {
     fi: 'Tarvitsetko osaavaa työvoimaa nopeasti? Ota yhteyttä niin löydämme juuri sinun tarpeisiisi sopivat työntekijät.',
-    en: 'Need skilled staff fast? Contact us and we'll match the right people to your specific needs.',
+    en: "Need skilled staff fast? Contact us and we'll match the right people to your specific needs.",
   },
 
   // Form fields
@@ -125,7 +125,7 @@ const translations: Translations = {
   },
   thankYou: {
     fi: 'Kiitos yhteydenotosta! Otamme sinuun pian yhteyttä.',
-    en: 'Thanks for getting in touch! We'll contact you shortly.',
+    en: "Thanks for getting in touch! We'll contact you shortly.",
   },
 
   // Services section
@@ -187,7 +187,7 @@ const translations: Translations = {
   },
   descOther: {
     fi: 'Kerro meille erityistarpeistasi, niin etsimme juuri oikean henkilön tehtävään.',
-    en: 'Tell us your special needs — we'll find the right fit for the role.',
+    en: "Tell us your special needs — we'll find the right fit for the role.",
   },
 
   // Footer translations
