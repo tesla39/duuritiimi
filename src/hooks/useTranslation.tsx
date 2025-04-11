@@ -1,4 +1,3 @@
-
 import { useState, createContext, useContext, ReactNode } from 'react';
 
 type Language = 'fi' | 'en';
@@ -208,6 +207,44 @@ const translations: Translations = {
   aboutUsContent: {
     fi: 'Olemme rekrytointialan asiantuntijoita, jotka auttavat yrityksiä ja kotitalouksia löytämään oikeat työntekijät oikeaan aikaan. Tavoitteenamme on tarjota joustavia ja luotettavia henkilöstöratkaisuja eri tarpeisiin.',
     en: 'We are recruitment professionals helping companies and households find the right people at the right time. Our goal is to provide flexible and reliable staffing solutions for your diverse needs.',
+  },
+
+  // Contact section additional translations
+  contactDescription: {
+    fi: 'Kerro meille projektistasi ja tavoitteistasi. Olemme valmiita auttamaan sinua.',
+    en: 'Tell us about your project and goals. We are ready to help you.',
+  },
+  contactInfo: {
+    fi: 'Yhteystiedot',
+    en: 'Contact Information',
+  },
+  contactDirectly: {
+    fi: 'Voit ottaa meihin yhteyttä lomakkeen kautta tai suoraan alla olevilla yhteystiedoilla.',
+    en: 'You can reach us through the form or directly using the contact details below.',
+  },
+  phoneLabel: {
+    fi: 'Puhelin',
+    en: 'Phone',
+  },
+  name: {
+    fi: 'Nimi',
+    en: 'Name',
+  },
+  message: {
+    fi: 'Viesti',
+    en: 'Message',
+  },
+  sendMessage: {
+    fi: 'Lähetä viesti',
+    en: 'Send Message',
+  },
+  sending: {
+    fi: 'Lähetetään...',
+    en: 'Sending...',
+  },
+  willContactSoon: {
+    fi: 'Palaamme sinulle mahdollisimman pian.',
+    en: 'We will get back to you as soon as possible.',
   },
 };
 

@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -39,9 +41,9 @@ const Contact: React.FC = () => {
     <section id="contact" className="section bg-gray-50">
       <div className="container">
         <div className="text-center mb-12">
-          <h2 className="mb-4">Ota yhteyttä</h2>
+          <h2 className="mb-4">{t('contactUs')}</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Kerro meille projektistasi ja tavoitteistasi. Olemme valmiita auttamaan sinua.
+            {t('contactDescription')}
           </p>
         </div>
         
@@ -49,9 +51,9 @@ const Contact: React.FC = () => {
           {/* Contact information */}
           <div className="lg:col-span-2 space-y-6">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Yhteystiedot</h3>
+              <h3 className="text-2xl font-bold mb-4">{t('contactInfo')}</h3>
               <p className="text-gray-600">
-                Voit ottaa meihin yhteyttä lomakkeen kautta tai suoraan alla olevilla yhteystiedoilla.
+                {t('contactDirectly')}
               </p>
             </div>
             
@@ -61,7 +63,7 @@ const Contact: React.FC = () => {
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Sähköposti</h4>
+                  <h4 className="font-bold">{t('email')}</h4>
                   <a href="mailto:info@duuritiimi.fi" className="text-gray-600 hover:text-teal">
                     info@duuritiimi.fi
                   </a>
@@ -73,7 +75,7 @@ const Contact: React.FC = () => {
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Puhelin</h4>
+                  <h4 className="font-bold">{t('phoneLabel')}</h4>
                   <a href="tel:+358501234567" className="text-gray-600 hover:text-teal">
                     +358 50 123 4567
                   </a>
@@ -85,7 +87,7 @@ const Contact: React.FC = () => {
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="font-bold">Osoite</h4>
+                  <h4 className="font-bold">{t('address')}</h4>
                   <address className="not-italic text-gray-600">
                     Kauppakatu 10<br />
                     00100 Helsinki
@@ -104,15 +106,15 @@ const Contact: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Kiitos viestistäsi!</h3>
-                <p className="text-gray-600">Palaamme sinulle mahdollisimman pian.</p>
+                <h3 className="text-2xl font-bold mb-2">{t('thankYou')}</h3>
+                <p className="text-gray-600">{t('willContactSoon')}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                      Nimi
+                      {t('name')}
                     </label>
                     <input
                       type="text"
@@ -127,7 +129,7 @@ const Contact: React.FC = () => {
                   
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                      Sähköposti
+                      {t('email')}
                     </label>
                     <input
                       type="email"
@@ -142,7 +144,7 @@ const Contact: React.FC = () => {
                   
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                      Puhelinnumero
+                      {t('phoneNumber')}
                     </label>
                     <input
                       type="tel"
@@ -156,7 +158,7 @@ const Contact: React.FC = () => {
                   
                   <div className="md:col-span-2">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Viesti
+                      {t('message')}
                     </label>
                     <textarea
                       id="message"
@@ -175,7 +177,7 @@ const Contact: React.FC = () => {
                   disabled={isSubmitting}
                   className="w-full px-6 py-3 bg-teal text-white font-medium rounded-md hover:bg-teal-dark transition-colors disabled:opacity-70"
                 >
-                  {isSubmitting ? 'Lähetetään...' : 'Lähetä viesti'}
+                  {isSubmitting ? t('sending') : t('sendMessage')}
                 </button>
               </form>
             )}
