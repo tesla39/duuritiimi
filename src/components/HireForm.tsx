@@ -29,21 +29,35 @@ export function HireForm({ onSuccess }: HireFormProps) {
     }));
   };
 
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+    
+  //   // Simulate API call
+  //   await new Promise(resolve => setTimeout(resolve, 1000));
+    
+  //   toast({
+  //     title: t('thankYou'),
+  //     description: new Date().toLocaleString(),
+  //   });
+    
+  //   setIsSubmitting(false);
+  //   if (onSuccess) onSuccess();
+  // };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: t('thankYou'),
-      description: new Date().toLocaleString(),
+  
+    const response = await fetch('https://formspree.io/f/xrbqbzkk', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
-    
-    setIsSubmitting(false);
-    if (onSuccess) onSuccess();
-  };
+  
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
@@ -59,6 +73,8 @@ export function HireForm({ onSuccess }: HireFormProps) {
           required
           className="bg-gray-800 border-gray-700 text-white"
         />
+
+
       </div>
       
       <div>
