@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
@@ -11,32 +10,32 @@ const Contact: React.FC = () => {
     phone: '',
     message: '',
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
     }, 1500);
   };
-  
+
   return (
     <section id="contact" className="section bg-gray-50">
       <div className="container">
@@ -46,7 +45,7 @@ const Contact: React.FC = () => {
             {t('contactDescription')}
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-10">
           {/* Contact information */}
           <div className="lg:col-span-2 space-y-6">
@@ -56,7 +55,7 @@ const Contact: React.FC = () => {
                 {t('contactDirectly')}
               </p>
             </div>
-            
+
             <div className="space-y-4 pt-4">
               <div className="flex gap-4 items-start">
                 <div className="text-teal p-2 bg-teal bg-opacity-10 rounded-full">
@@ -69,7 +68,7 @@ const Contact: React.FC = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex gap-4 items-start">
                 <div className="text-teal p-2 bg-teal bg-opacity-10 rounded-full">
                   <Phone size={20} />
@@ -81,7 +80,7 @@ const Contact: React.FC = () => {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex gap-4 items-start">
                 <div className="text-teal p-2 bg-teal bg-opacity-10 rounded-full">
                   <MapPin size={20} />
@@ -89,14 +88,14 @@ const Contact: React.FC = () => {
                 <div>
                   <h4 className="font-bold">{t('address')}</h4>
                   <address className="not-italic text-gray-600">
-                    Kauppakatu 10<br />
-                    00100 Helsinki
+                  Koulukatu 13, <br />
+                    30100 Forssa
                   </address>
                 </div>
               </div>
             </div>
           </div>
-          
+
           {/* Contact form */}
           <div className="lg:col-span-3 bg-white rounded-lg shadow-sm p-6 lg:p-8">
             {submitted ? (
@@ -126,7 +125,7 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal focus:border-teal"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
                       {t('email')}
@@ -141,7 +140,7 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal focus:border-teal"
                     />
                   </div>
-                  
+
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
                       {t('phoneNumber')}
@@ -155,7 +154,7 @@ const Contact: React.FC = () => {
                       className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-teal focus:border-teal"
                     />
                   </div>
-                  
+
                   <div className="md:col-span-2">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
                       {t('message')}
@@ -171,7 +170,7 @@ const Contact: React.FC = () => {
                     ></textarea>
                   </div>
                 </div>
-                
+
                 <button
                   type="submit"
                   disabled={isSubmitting}
