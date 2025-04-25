@@ -178,6 +178,9 @@ const Contact: React.FC = () => {
                 >
                   {isSubmitting ? t('sending') : t('sendMessage')}
                 </button>
+                <button type="submit">
+      Test Submit
+    </button>
               </form>
             )}
           </div>
