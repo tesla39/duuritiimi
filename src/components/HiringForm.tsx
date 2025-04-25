@@ -73,8 +73,17 @@ export function HiringForm({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
   
+    // const response = await fetch('https://formspree.io/f/xrbqbzkk', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(formData),
+    // });
+
     const response = await fetch('https://formspree.io/f/xrbqbzkk', {
       method: 'POST',
       headers: {
@@ -83,6 +92,23 @@ export function HiringForm({
       },
       body: JSON.stringify(formData),
     });
+    
+    const data = await response.json();
+    setIsSubmitting(false);
+    
+    if (response.ok) {
+      toast({
+        title: t('thankYou'),
+        description: new Date().toLocaleString()
+      });
+      if (onSuccess) onSuccess();
+    } else {
+      toast({
+        title: 'Submission failed',
+        description: data?.message || 'Something went wrong.'
+      });
+    }
+    
   
   // const handleSubmit = async (e: React.FormEvent) => {
   //   e.preventDefault();
