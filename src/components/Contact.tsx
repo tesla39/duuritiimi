@@ -174,7 +174,7 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-teal text-white font-medium rounded-md hover:bg-teal-dark transition-colors disabled:opacity-70"
+                  // className="w-full px-6 py-3 bg-teal text-white font-medium rounded-md hover:bg-teal-dark transition-colors disabled:opacity-70"
                 >
                   {isSubmitting ? t('sending') : t('sendMessage')}
                 </button>
