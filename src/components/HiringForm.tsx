@@ -70,19 +70,33 @@ export function HiringForm({
       [name]: value
     }));
   };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    toast({
-      title: t('thankYou'),
-      description: new Date().toLocaleString()
+  
+    const response = await fetch('https://formspree.io/f/xrbqbzkk', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
     });
-    setIsSubmitting(false);
-    if (onSuccess) onSuccess();
-  };
+  
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   // Simulate API call
+  //   await new Promise(resolve => setTimeout(resolve, 1000));
+  //   toast({
+  //     title: t('thankYou'),
+  //     description: new Date().toLocaleString()
+  //   });
+  //   setIsSubmitting(false);
+  //   if (onSuccess) onSuccess();
+  // };
   const formatDateTime = (date: Date | null, time: string): string => {
     if (!date) return '';
     return `${format(date, 'MM/dd/yyyy')}, ${time}`;
