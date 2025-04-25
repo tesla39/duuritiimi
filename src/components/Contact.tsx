@@ -14,27 +14,56 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+  
+    const response = await fetch('https://formspree.io/f/mwpopevo', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+  
+    if (response.ok) {
       setSubmitted(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-
+      
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitted(false);
       }, 5000);
-    }, 1500);
+    }
+  
+    setIsSubmitting(false);
   };
+
+
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
+
+  //   // Simulate form submission
+  //   setTimeout(() => {
+  //     setIsSubmitting(false);
+  //     setSubmitted(true);
+  //     setFormData({ name: '', email: '', phone: '', message: '' });
+
+  //     // Reset success message after 5 seconds
+  //     setTimeout(() => {
+  //       setSubmitted(false);
+  //     }, 5000);
+  //   }, 1500);
+  // };
 
   return (
     <section id="contact" className="section bg-gray-50">
@@ -174,8 +203,8 @@ const Contact: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-[#008080] text-white font-bold rounded-md border border-[#006666] hover:bg-[#006666] transition-colors disabled:opacity-70"
-                >
+                  className="w-full px-6 py-3 bg-yellow-500 text-white font-bold rounded-md border border-yellow-600 hover:bg-yellow-600 transition-colors disabled:opacity-70"
+                  >
                   {isSubmitting ? t('sending') : t('sendMessage')}
     </button>
               </form>
